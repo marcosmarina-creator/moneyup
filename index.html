@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MoneyUp — Seu dinheiro em ordem</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--soft:#eaf6ee;--ink:#10241a;--mute:#4d6558;--green:#12803f;--deep:#0b4a27;--line:#cfe3d5;--on-green:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1a13;--soft:#14271c;--ink:#e8f4ec;--mute:#9db5a5;--green:#3ec777;--deep:#7fe0a5;--line:#24402f;--on-green:#08210f}}
+:root[data-theme="dark"]{--bg:#0d1a13;--soft:#14271c;--ink:#e8f4ec;--mute:#9db5a5;--green:#3ec777;--deep:#7fe0a5;--line:#24402f;--on-green:#08210f}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+.logo{font-weight:800;font-size:1.4rem;text-decoration:none;letter-spacing:-.02em}
+.logo b{color:var(--green)}
+nav{display:flex;gap:20px;align-items:center}
+nav a{text-decoration:none;color:var(--mute);font-weight:500}
+nav a:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--green);color:var(--on-green);padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn:hover{filter:brightness(1.08)}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--green);outline-offset:3px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:56px 0 72px}
+h1{font-size:clamp(2.4rem,6vw,4.2rem);line-height:1.02;letter-spacing:-.035em;margin:0 0 18px;font-weight:800}
+.lead{font-size:1.15rem;color:var(--mute);max-width:46ch;margin:0 0 28px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.panel{background:var(--soft);border:1px solid var(--line);border-radius:20px;padding:24px}
+.panel small{color:var(--mute)}
+.saldo{font-size:2.2rem;font-weight:800;letter-spacing:-.02em;margin:2px 0 18px}
+.bars{display:flex;align-items:flex-end;gap:10px;height:120px;border-bottom:1.5px solid var(--line)}
+.bars i{flex:1;background:var(--green);border-radius:6px 6px 0 0;opacity:.35}
+.bars i:last-child{opacity:1}
+.meses{display:flex;gap:10px;margin-top:6px;color:var(--mute);font-size:.8rem}
+.meses span{flex:1;text-align:center}
+.row{display:flex;justify-content:space-between;margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-weight:500}
+.row b{color:var(--green)}
+section{padding:64px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(1.7rem,4vw,2.5rem);letter-spacing:-.03em;line-height:1.1;margin:0 0 32px;max-width:20ch}
+.opts{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 48px}
+.opt{border-left:4px solid var(--green);padding-left:18px}
+.opt h3{margin:0 0 4px;font-size:1.2rem}
+.opt p{margin:0;color:var(--mute)}
+.cta{background:var(--deep);color:#fff;border-radius:24px;padding:48px 32px;text-align:center;margin:0 0 56px}
+.cta h2{color:#fff;margin:0 auto 12px}
+.cta p{margin:0 auto 24px;color:#cfe8d8;max-width:44ch}
+.cta .btn{background:#fff;color:#0b4a27}
+footer{padding:0 0 32px;color:var(--mute);font-size:.9rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+@media (max-width:760px){.hero{grid-template-columns:1fr;padding-top:24px}.opts{grid-template-columns:1fr}nav a.hide{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="#">Money<b>Up</b></a>
+    <nav>
+      <a class="hide" href="#recursos">Recursos</a>
+      <a class="hide" href="#comecar">Começar</a>
+      <a class="btn ghost" href="/login.html">Entrar</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div>
+        <h1>Seu dinheiro em ordem, mês após mês.</h1>
+        <p class="lead">Registre ganhos e gastos, acompanhe metas e veja para onde o dinheiro vai. Tudo em um só lugar, simples de usar.</p>
+        <div class="actions">
+          <a class="btn" href="/login.html#criar">Criar conta grátis</a>
+          <a class="btn ghost" href="#recursos">Ver recursos</a>
+        </div>
+      </div>
+      <div class="panel" role="img" aria-label="Exemplo de painel com saldo do mês e gráfico de barras">
+        <small>Saldo do mês</small>
+        <div class="saldo">R$ 2.480,00</div>
+        <div class="bars"><i style="height:35%"></i><i style="height:50%"></i><i style="height:42%"></i><i style="height:68%"></i><i style="height:60%"></i><i style="height:92%"></i></div>
+        <div class="meses"><span>Abr</span><span>Mai</span><span>Jun</span><span>Jul</span><span>Ago</span><span>Set</span></div>
+        <div class="row"><span>Meta da viagem</span><b>72%</b></div>
+      </div>
+    </div>
+
+    <section id="recursos">
+      <h2>Tudo o que você precisa para controlar o dinheiro</h2>
+      <div class="opts">
+        <div class="opt"><h3>Painel do mês</h3><p>Veja saldo, entradas e saídas assim que abrir o site.</p></div>
+        <div class="opt"><h3>Lançamentos</h3><p>Registre cada ganho ou gasto em poucos toques, com categoria.</p></div>
+        <div class="opt"><h3>Metas</h3><p>Defina um valor, um prazo e acompanhe quanto já guardou.</p></div>
+        <div class="opt"><h3>Relatórios</h3><p>Compare meses e descubra onde dá para economizar.</p></div>
+      </div>
+    </section>
+
+    <section id="comecar" style="border-top:0;padding-top:0">
+      <div class="cta">
+        <h2>Comece a fazer seu dinheiro subir</h2>
+        <p>Crie sua conta e faça o primeiro lançamento hoje.</p>
+        <a class="btn" href="/login.html#criar">Criar conta grátis</a>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>© 2026 MoneyUp</span><span>Feito com vibe coding</span></footer>
+</div>
+</body>
+</html>
